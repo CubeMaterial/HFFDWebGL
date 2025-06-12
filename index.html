@@ -31,12 +31,14 @@
       }
     </style>
   </head>
-  <body>
 <!--  <body style="text-align: center; padding: 0; border: 0; margin: 0;">-->
-<div id="unity-container">
-  <canvas id="unity-canvas"></canvas>
-  <!--    <canvas id="unity-canvas" width=auto height=100% style="width: 1080px; height: 1920px; background: #231F20"></canvas>-->
-</div>
+<!--    <canvas id="unity-canvas" width=1080 height=1920 style="width: 1080px; height: 1920px; background: #231F20"></canvas>-->
+  <body>
+  <!--  <body style="text-align: center; padding: 0; border: 0; margin: 0;">-->
+  <div id="unity-container">
+    <canvas id="unity-canvas"></canvas>
+    <!--    <canvas id="unity-canvas" width=auto height=100% style="width: 1080px; height: 1920px; background: #231F20"></canvas>-->
+  </div>
     <script src="Build/Build.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -46,12 +48,12 @@
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
 
-        // var canvas = document.querySelector("#unity-canvas");
-        // canvas.style.width = "100%";
-        // canvas.style.height = "100%";
-        // canvas.style.position = "fixed";
-        //
-        // document.body.style.textAlign = "left";
+        var canvas = document.querySelector("#unity-canvas");
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.position = "fixed";
+
+        document.body.style.textAlign = "left";
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
